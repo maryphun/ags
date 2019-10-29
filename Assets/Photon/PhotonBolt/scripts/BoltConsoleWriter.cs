@@ -32,9 +32,9 @@ namespace Bolt {
 
     public static void Open() {
 #if UNITY_STANDALONE_WIN
-      if (realOut == null) {
+      //if (realOut == null) {
         realOut = Console.Out;
-      }
+      //}
 
       var hasConsole = PInvoke.AttachConsole(0x0ffffffff);
       if (hasConsole == false) {
