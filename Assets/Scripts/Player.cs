@@ -13,7 +13,6 @@ public class Player : Bolt.EntityBehaviour<ICubeStateCustom>
         {
             state.Color = new Color(Random.value, Random.value, Random.value);
         }
-
         state.AddCallback("Color", ColorChanged);
     }
 
@@ -41,6 +40,13 @@ public class Player : Bolt.EntityBehaviour<ICubeStateCustom>
         if (movement != Vector3.zero)
         {
             transform.position = transform.position + (movement.normalized * speed * BoltNetwork.FrameDeltaTime);
+        }
+
+        // 弾を撃つ
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject bulletPrefab = (GameObject)Resources.Load("Sphere");
+            BoltNetwork.Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         }
     }
 
