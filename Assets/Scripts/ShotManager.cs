@@ -16,28 +16,28 @@ public class ShotManager : MonoBehaviour
     {
         // 弾に格納する値
         // PlayerManagerというｵﾌﾞｼﾞｪｸﾄを見つける
-        shotSetting = GameObject.Find(PlayerMgr);
+        //shotSetting = GameObject.Find(PlayerMgr);
     }
 
     // Update is called once per frame
     void Update()
     {
         // 弾の種類
-        var shotType = shotSetting.GetShotType();
+       // var shotType = shotSetting.GetShotType();
         // 弾生成
-        Instantiate(shotType, shotSetting.GetPos(), Quaternion.identity);
+        //Instantiate(shotType, shotSetting.GetPos(), Quaternion.identity);
     }
 
     // 弾のｽﾋﾟｰﾄﾞを渡す
-    float GetSpeed()
-    {
-        return shotSetting.GetSpeed();
-    }
+    //float GetSpeed()
+    //{
+    //   // return shotSetting.GetSpeed();
+    //}
 
-    // 向きを渡す
-    Vector3 GetAngle()
-    {
-        return shotSetting.GetAngle();
-    }
+    //// 向きを渡す
+    //Vector3 GetAngle()
+    //{
+    //    return shotSetting.GetAngle();
+    //}
 
 }
