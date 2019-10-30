@@ -228,7 +228,6 @@
         {
           "Name": "respawnFrame",
           "Enabled": true,
-          "Expanded": true,
           "ReplicationMode": 1,
           "Comment": "",
           "Priority": 1,
