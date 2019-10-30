@@ -9,7 +9,7 @@ public class NetworkCallbacks : Bolt.GlobalEventListener
         // randomize a position
         var spawnPosition = new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
 
-        GameObject player = (GameObject)Resources.Load("SciFiWarriorPBR");
+        GameObject player = (GameObject)Resources.Load("Cube");
         // instantiate cube
         BoltNetwork.Instantiate(player, spawnPosition, Quaternion.identity);
     }
